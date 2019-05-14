@@ -7,9 +7,10 @@ import { Demo } from "./views/demo.js";
 import { Single } from "./views/single.js";
 import injectContext from "./store/appContext.js";
 
-import { Navbar } from "./component/navbar.js";
+//import { Navbar } from "./component/navbar.js";
 import { Footer } from "./component/footer.js";
 import { BartenderList } from "./views/bartender_list.js";
+import { AdminView } from "./views/admin_view.js";
 
 //create your first component
 export class Layout extends React.Component {
@@ -22,13 +23,12 @@ export class Layout extends React.Component {
 			<div className="d-flex flex-column h-100">
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
-						<Navbar />
-
 						<Switch>
 							<Route exact path="/" component={Home} />
 							<Route path="/demo" component={Demo} />
 							<Route path="/single/:theid" component={Single} />
 							<Route path="/bartender/list" component={BartenderList} />
+							<Route path="/admin/view" component={AdminView} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />

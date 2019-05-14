@@ -4,6 +4,6 @@ import PropTypes from "prop-types";
 
 export class BartenderList extends React.Component {
 	render() {
-		return <h1>asdadas</h1>;
+		return <h1>asdasdass</h1>;
 	}
 }
